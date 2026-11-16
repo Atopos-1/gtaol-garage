@@ -71,13 +71,16 @@ build_all.bat
 
 ## 数据来源与版权声明
 
-本项目**只开源代码**（MIT License）。代码内嵌的载具数据与车辆图片**不随仓库分发**，需通过 `tools/` 脚本自行抓取。
+本项目**开源代码**（MIT License），并随仓库附带载具数据（`vehicles_compact.json`）与车辆图片（`app/src/main/assets/img/`，通过 **Git LFS** 存储）。
 
 - 载具名称、参数、介绍等数据，来源于公开的 GTA 中文数据库（antwen.cn 等）与 GTA 中文维基
-- 车辆图片版权归原站点 / 原作者所有
+- **图片版权归原站点 / 原作者所有**，本项目仅作学习交流用途收集整理
+- 若原作者认为侵权，请提 Issue 或邮件联系，我会立即删除相关图片
 - 本项目与 Rockstar Games、Take-Two Interactive 无任何关联，GTA、Grand Theft Auto 等均为其商标
 
-**请勿将抓取到的数据/图片用于商业用途。** 仅建议个人学习使用。
+**请勿将本项目附带的数据/图片用于商业用途。** 仅建议个人学习使用。
+
+> ⚠️ 使用 Git LFS：克隆前请先安装 [Git LFS](https://git-lfs.com/)，然后 `git lfs install` 再 `git clone`。否则图片将只是指针文件。
 
 ## 许可证
 

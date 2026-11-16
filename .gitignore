@@ -12,22 +12,16 @@ local.properties
 *.iml
 .DS_Store
 
-# 抓取到的第三方数据与图片（版权归原站点所有，不随仓库分发）
-vehicles_compact.json
-vehicles_full.json
-vehicles_detail.json
-app/src/main/assets/index.html
-app/src/main/assets/img/
-*.webp
-
-# 中间产物
-detail_cache/
-assets/img/
-fetch.log
-details.log
-*.log
-
 # 签名密钥（严禁提交）
 keystore.properties
 *.jks
 *.keystore
+
+# 抓取中间产物（已整理后的数据与图片会提交，中间缓存不入库）
+detail_cache/
+fetch.log
+details.log
+*.log
+
+# 注意：vehicles_compact.json 与 app/src/main/assets/img/ 会被提交
+# 图片通过 Git LFS 管理，见 .gitattributes
