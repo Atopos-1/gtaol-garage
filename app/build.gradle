@@ -1,0 +1,34 @@
+// 子模块：应用 Android 应用插件
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.gtaol.garage'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.gtaol.garage"
+        minSdk 24
+        targetSdk 34
+        versionCode 7
+        versionName "4.1"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            // 不强制签名：assembleRelease 产出未签名 APK。
+            // 若需可安装包，请配置自己的 keystore（见 README「签名」）。
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+}

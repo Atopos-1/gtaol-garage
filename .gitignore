@@ -1,0 +1,33 @@
+# 构建产物
+build/
+.gradle/
+*.apk
+*.aab
+
+# 本地环境配置（含本机 SDK 路径，勿提交）
+local.properties
+
+# IDE
+.idea/
+*.iml
+.DS_Store
+
+# 抓取到的第三方数据与图片（版权归原站点所有，不随仓库分发）
+vehicles_compact.json
+vehicles_full.json
+vehicles_detail.json
+app/src/main/assets/index.html
+app/src/main/assets/img/
+*.webp
+
+# 中间产物
+detail_cache/
+assets/img/
+fetch.log
+details.log
+*.log
+
+# 签名密钥（严禁提交）
+keystore.properties
+*.jks
+*.keystore
