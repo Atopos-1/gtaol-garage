@@ -33,42 +33,6 @@ gtaol-garage/
 └── README.md
 ```
 
-## 构建方法
-
-### 前置条件
-
-- JDK 17（或 21）
-- Android SDK（compileSdk 34、build-tools 34.0.0）
-- 网络（首次构建拉取 Gradle 依赖；构建数据需访问第三方源）
-
-### 一键构建
-
-```bash
-# Linux / macOS
-./build_all.sh
-
-# Windows
-build_all.bat
-```
-
-脚本会依次：① 抓取载具数据 → ② 下载车辆缩略图 → ③ 生成页面 → ④ 编译 APK。
-
-### 手动构建
-
-1. 运行 `tools/` 下的抓取脚本，生成 `vehicles_compact.json` 和 `assets/img/` 图片
-2. 运行生成脚本，产出 `app/src/main/assets/index.html`
-3. 把图片放进 `app/src/main/assets/img/`
-4. 执行 `./gradlew assembleRelease`
-
-### 签名
-
-`assembleRelease` 默认产出**未签名** APK（`app-release-unsigned.apk`），可直接用于学习，但无法直接安装。
-
-要产出可安装包，二选一：
-
-1. **用 debug 签名快速出包**：执行 `./gradlew assembleDebug`，产物 `app-debug.apk` 已用 debug keystore 签名，可直接装到手机。
-2. **配自己的 release keystore**：生成 keystore 后，在 `app/build.gradle` 里加 `signingConfigs.release` 并引用；keystore 文件与密码**不要提交**（已加入 `.gitignore`）。
-
 ## 数据来源与版权声明
 
 本项目**开源代码**（MIT License），并随仓库附带载具数据（`vehicles_compact.json`）与车辆图片（`app/src/main/assets/img/`，通过 **Git LFS** 存储）。
